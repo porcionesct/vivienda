@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación ITC-BT-25</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        .pregunta { margin-bottom: 25px; padding: 15px; border-left: 5px solid #004a99; background: #f9f9f9; }
+        .opcion { display: block; margin: 8px 0; cursor: pointer; padding: 5px; border-radius: 4px; }
+        .opcion:hover { background-color: #f0f4f8; }
+        button { padding: 15px 30px; background-color: #004a99; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 18px; width: 100%; margin-top: 20px; margin-bottom: 50px; }
+        
+        /* Estilos para el resultado final manteniendo el formato */
+        .resultado-final { text-align: center; padding: 40px; border: 2px solid #004a99; border-radius: 10px; background: #fff; margin-top: 20px; }
+        .nota-valor { font-size: 5em; font-weight: bold; display: block; }
+        .mensaje-nota { font-size: 1.5em; font-weight: bold; margin: 15px 0; }
+        .btn-reintentar { display: inline-block; padding: 12px 24px; background: #004a99; color: white; text-decoration: none; border-radius: 5px; margin-top: 15px; }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Evaluación de Conocimientos</h1>
+        <p>Instrucción Técnica Complementaria ITC-BT-25 </p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Resumen ITC-BT-25</a></li> 
+            <li><a href="basica.html">Electrificación Básica</a></li>
+            <li><a href="elevada.html">Electrificación Elevada</a></li>
+            <li><a href="puntos_minimos.html">Puntos de Utilización</a></li>
+            <li><a href="prl.html">PRL</a></li>
+            <li><a href="presupuesto.html">Presupuesto</a></li>
+            <li class="active"><a href="evaluacion.html">Evaluación</a></li>
+        </ul>
+    </nav>
+
+    <div class="container" id="main-content">
+        <h2>Examen Final</h2>
+        <p>Selecciona la respuesta correcta para cada una de las 30 cuestiones técnicas.</p>
+
+        <form id="quizForm">
+            <div class="pregunta">
+                <p>1. ¿Potencia mínima prevista para electrificación básica?</p>
+                <label class="opcion"><input type="radio" name="p1" value="A"> A) 3,45 kW</label>
+                <label class="opcion"><input type="radio" name="p1" value="B"> B) 5,75 kW</label>
+                <label class="opcion"><input type="radio" name="p1" value="C"> C) 9,2 kW</label>
+            </div>
+            <div class="pregunta">
+                <p>2. ¿Potencia mínima prevista para electrificación elevada? </p>
+                <label class="opcion"><input type="radio" name="p2" value="A"> A) 5,75 kW</label>
+                <label class="opcion"><input type="radio" name="p2" value="B"> B) 7,36 kW</label>
+                <label class="opcion"><input type="radio" name="p2" value="C"> C) 9,2 kW</label>
+            </div>
+            <div class="pregunta">
+                <p>3. ¿Superficie útil mínima para obligar al grado elevado?</p>
+                <label class="opcion"><input type="radio" name="p3" value="A"> A) 160 m²</label>
+                <label class="opcion"><input type="radio" name="p3" value="B"> B) 120 m²</label>
+                <label class="opcion"><input type="radio" name="p3" value="C"> C) 200 m²</label>
+            </div>
+
+            <div class="pregunta">
+                <p>4. ¿Uso del circuito C1?</p>
+                <label class="opcion"><input type="radio" name="p4" value="A"> A) Alumbrado</label>
+                <label class="opcion"><input type="radio" name="p4" value="B"> B) Lavadora</label>
+                <label class="opcion"><input type="radio" name="p4" value="C"> C) Cocina</label>
+            </div>
+            <div class="pregunta">
+                <p>5. Sección de cable para el circuito C1: </p>
+                <label class="opcion"><input type="radio" name="p5" value="A"> A) 1,5 mm²</label>
+                <label class="opcion"><input type="radio" name="p5" value="B"> B) 2,5 mm²</label>
+                <label class="opcion"><input type="radio" name="p5" value="C"> C) 4 mm²</label>
+            </div>
+            <div class="pregunta">
+                <p>6. Protección PIA para el circuito C1: </p>
+                <label class="opcion"><input type="radio" name="p6" value="A"> A) 10 A</label>
+                <label class="opcion"><input type="radio" name="p6" value="B"> B) 16 A</label>
+                <label class="opcion"><input type="radio" name="p6" value="C"> C) 20 A</label>
+            </div>
+            <div class="pregunta">
+                <p>7. El circuito C2 se destina a: </p>
+                <label class="opcion"><input type="radio" name="p7" value="A"> A) Horno</label>
+                <label class="opcion"><input type="radio" name="p7" value="B"> B) Tomas de uso general y frigorífico</label>
+                <label class="opcion"><input type="radio" name="p7" value="C"> C) Baño</label>
+            </div>
+            <div class="pregunta">
+                <p>8. Sección de cable para C2: </p>
+                <label class="opcion"><input type="radio" name="p8" value="A"> A) 2,5 mm²</label>
+                <label class="opcion"><input type="radio" name="p8" value="B"> B) 1,5 mm²</label>
+                <label class="opcion"><input type="radio" name="p8" value="C"> C) 6 mm²</label>
+            </div>
+            <div class="pregunta">
+                <p>9. ¿Uso del circuito C3? </p>
+                <label class="opcion"><input type="radio" name="p9" value="A"> A) Lavavajillas</label>
+                <label class="opcion"><input type="radio" name="p9" value="B"> B) Cocina y horno</label>
+                <label class="opcion"><input type="radio" name="p9" value="C"> C) Aire acondicionado</label>
+            </div>
+            <div class="pregunta">
+                <p>10. Sección de cable para C3: </p>
+                <label class="opcion"><input type="radio" name="p10" value="A"> A) 4 mm²</label>
+                <label class="opcion"><input type="radio" name="p10" value="B"> B) 6 mm²</label>
+                <label class="opcion"><input type="radio" name="p10" value="C"> C) 2,5 mm²</label>
+            </div>
+            <div class="pregunta">
+                <p>11. PIA para el circuito C3: </p>
+                <label class="opcion"><input type="radio" name="p11" value="A"> A) 25 A</label>
+                <label class="opcion"><input type="radio" name="p11" value="B"> B) 20 A</label>
+                <label class="opcion"><input type="radio" name="p11" value="C"> C) 16 A</label>
+            </div>
+            <div class="pregunta">
+                <p>12. El circuito C4 incluye: </p>
+                <label class="opcion"><input type="radio" name="p12" value="A"> A) Lavadora, lavavajillas y termo</label>
+                <label class="opcion"><input type="radio" name="p12" value="B"> B) Luces de pasillo</label>
+                <label class="opcion"><input type="radio" name="p12" value="C"> C) Vitrocerámica</label>
+            </div>
+            <div class="pregunta">
+                <p>13. Sección de cable para C4: </p>
+                <label class="opcion"><input type="radio" name="p13" value="A"> A) 2,5 mm²</label>
+                <label class="opcion"><input type="radio" name="p13" value="B"> B) 4 mm²</label>
+                <label class="opcion"><input type="radio" name="p13" value="C"> C) 6 mm²</label>
+            </div>
+            <div class="pregunta">
+                <p>14. PIA para el circuito C4: </p>
+                <label class="opcion"><input type="radio" name="p14" value="A"> A) 16 A</label>
+                <label class="opcion"><input type="radio" name="p14" value="B"> B) 20 A</label>
+                <label class="opcion"><input type="radio" name="p14" value="C"> C) 25 A</label>
+            </div>
+            <div class="pregunta">
+                <p>15. El circuito C5 alimenta: </p>
+                <label class="opcion"><input type="radio" name="p15" value="A"> A) Tomas de baño y auxiliares de cocina</label>
+                <label class="opcion"><input type="radio" name="p15" value="B"> B) Salón</label>
+                <label class="opcion"><input type="radio" name="p15" value="C"> C) Garaje</label>
+            </div>
+            <div class="pregunta">
+                <p>16. Sección y PIA para C5: </p>
+                <label class="opcion"><input type="radio" name="p16" value="A"> A) 2,5 mm² y 16 A</label>
+                <label class="opcion"><input type="radio" name="p16" value="B"> B) 1,5 mm² y 10 A</label>
+                <label class="opcion"><input type="radio" name="p16" value="C"> C) 4 mm² y 20 A</label>
+            </div>
+
+            <div class="pregunta">
+                <p>17. Sensibilidad del diferencial en vivienda: </p>
+                <label class="opcion"><input type="radio" name="p17" value="A"> A) 30 mA</label>
+                <label class="opcion"><input type="radio" name="p17" value="B"> B) 300 mA</label>
+                <label class="opcion"><input type="radio" name="p17" value="C"> C) 10 mA</label>
+            </div>
+            <div class="pregunta">
+                <p>18. ¿Qué significa IGA? </p>
+                <label class="opcion"><input type="radio" name="p18" value="A"> A) Interruptor General Automático</label>
+                <label class="opcion"><input type="radio" name="p18" value="B"> B) Instalación General de Agua</label>
+                <label class="opcion"><input type="radio" name="p18" value="C"> C) Interruptor de Giro Anual</label>
+            </div>
+            <div class="pregunta">
+                <p>19. El ICP sirve para: </p>
+                <label class="opcion"><input type="radio" name="p19" value="A"> A) Controlar la potencia contratada</label>
+                <label class="opcion"><input type="radio" name="p19" value="B"> B) Evitar fugas</label>
+                <label class="opcion"><input type="radio" name="p19" value="C"> C) Medir la luz</label>
+            </div>
+            <div class="pregunta">
+                <p>20. ¿Qué protege el protector de sobretensiones? </p>
+                <label class="opcion"><input type="radio" name="p20" value="A"> A) Personas</label>
+                <label class="opcion"><input type="radio" name="p20" value="B"> B) El contador</label>
+                <label class="opcion"><input type="radio" name="p20" value="C"> C) Equipos ante picos de tensión</label>
+            </div>
+
+            <div class="pregunta">
+                <p>21. Color del conductor de tierra: </p>
+                <label class="opcion"><input type="radio" name="p21" value="A"> A) Azul</label>
+                <label class="opcion"><input type="radio" name="p21" value="B"> B) Negro</label>
+                <label class="opcion"><input type="radio" name="p21" value="C"> C) Verde-Amarillo</label>
+            </div>
+            <div class="pregunta">
+                <p>22. El conductor neutro es: </p>
+                <label class="opcion"><input type="radio" name="p22" value="A"> A) Azul</label>
+                <label class="opcion"><input type="radio" name="p22" value="B"> B) Gris</label>
+                <label class="opcion"><input type="radio" name="p22" value="C"> C) Marrón</label>
+            </div>
+            <div class="pregunta">
+                <p>23. El circuito para calefacción es: </p>
+                <label class="opcion"><input type="radio" name="p23" value="A"> A) C8</label>
+                <label class="opcion"><input type="radio" name="p23" value="B"> B) C1</label>
+                <label class="opcion"><input type="radio" name="p23" value="C"> C) C2</label>
+            </div>
+            <div class="pregunta">
+                <p>24. El aire acondicionado requiere el circuito: </p>
+                <label class="opcion"><input type="radio" name="p24" value="A"> A) C9</label>
+                <label class="opcion"><input type="radio" name="p24" value="B"> B) C5</label>
+                <label class="opcion"><input type="radio" name="p24" value="C"> C) C3</label>
+            </div>
+            <div class="pregunta">
+                <p>25. La secadora independiente usa el circuito:</p>
+                <label class="opcion"><input type="radio" name="p25" value="A"> A) C10</label>
+                <label class="opcion"><input type="radio" name="p25" value="B"> B) C4</label>
+                <label class="opcion"><input type="radio" name="p25" value="C"> C) C2</label>
+            </div>
+
+            <div class="pregunta">
+                <p>26. El uso de toma de tierra es obligatorio en: </p>
+                <label class="opcion"><input type="radio" name="p26" value="A"> A) Toda la vivienda</label>
+                <label class="opcion"><input type="radio" name="p26" value="B"> B) Solo cocina</label>
+                <label class="opcion"><input type="radio" name="p26" value="C"> C) Solo baños</label>
+            </div>
+            <div class="pregunta">
+                <p>27. Si hay más de 30 puntos de luz se añade: </p>
+                <label class="opcion"><input type="radio" name="p27" value="A"> A) Circuito C6</label>
+                <label class="opcion"><input type="radio" name="p27" value="B"> B) Más PIAs de 10A</label>
+                <label class="opcion"><input type="radio" name="p27" value="C"> C) Cable de 2,5mm²</label>
+            </div>
+            <div class="pregunta">
+                <p>28. ¿Se pueden mezclar circuitos en el mismo tubo?</p>
+                <label class="opcion"><input type="radio" name="p28" value="A"> A) No, separación obligatoria</label>
+                <label class="opcion"><input type="radio" name="p28" value="B"> B) Sí, si caben</label>
+                <label class="opcion"><input type="radio" name="p28" value="C"> C) Solo en reformas</label>
+            </div>
+            <div class="pregunta">
+                <p>29. El diferencial protege contra: </p>
+                <label class="opcion"><input type="radio" name="p29" value="A"> A) Contactos indirectos y fugas</label>
+                <label class="opcion"><input type="radio" name="p29" value="B"> B) Cortocircuitos</label>
+                <label class="opcion"><input type="radio" name="p29" value="C"> C) Rayos</label>
+            </div>
+            <div class="pregunta">
+                <p>30. En el salón se requiere 1 toma C2 cada: </p>
+                <label class="opcion"><input type="radio" name="p30" value="A"> A) 6 m²</label>
+                <label class="opcion"><input type="radio" name="p30" value="B"> B) 10 m²</label>
+                <label class="opcion"><input type="radio" name="p30" value="C"> C) 2 m</label>
+            </div>
+
+            <button type="button" onclick="calcularNotaFinal()">Enviar Evaluación</button>
+        </form>
+    </div>
+
+    <script>
+        function calcularNotaFinal() {
+            // Clave ofuscada (Letra correcta por pregunta)
+            const clave = ['B', 'C', 'A', 'A', 'A', 'A', 'B', 'A', 'B', 'B', 'A', 'A', 'B', 'B', 'A', 'A', 'A', 'A', 'A', 'C', 'C', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A'];
+            let aciertos = 0;
+            const form = document.getElementById('quizForm');
+            const main = document.getElementById('main-content');
+
+            for (let i = 1; i <= 30; i++) {
+                const radios = document.getElementsByName('p' + i);
+                for (const r of radios) {
+                    if (r.checked && r.value === clave[i-1]) aciertos++;
+                }
+            }
+
+            const nota = (aciertos / 30) * 10;
+            const color = nota >= 5 ? "#28a745" : "#dc3545";
+
+            // Refresco de pantalla manteniendo header/nav
+            main.innerHTML = `
+                <div class="resultado-final">
+                    <h2 style="color: ${color}">CALIFICACIÓN OBTENIDA</h2>
+                    <span class="nota-valor" style="color: ${color}">${nota.toFixed(1)}</span>
+                    <p class="mensaje-nota">${nota >= 5 ? '¡APROBADO!' : 'NECESITAS REPASAR'}</p>
+                    <p>Aciertos: ${aciertos} de 30 cuestiones técnicas.</p>
+                    <a href="evaluacion.html" class="btn-reintentar">Reiniciar Examen</a>
+                </div>
+            `;
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>

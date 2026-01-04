@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puntos Mínimos de Utilización - ITC-BT-25</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        .tabla-puntos { width: 100%; border-collapse: collapse; margin: 20px 0; background-color: #fff; }
+        .tabla-puntos th { background-color: #004a99; color: white; padding: 12px; text-align: left; }
+        .tabla-puntos td { border: 1px solid #ddd; padding: 10px; font-size: 0.95em; }
+        .tabla-puntos tr:nth-child(even) { background-color: #f9f9f9; }
+        .destacado-punto { font-weight: bold; color: #004a99; }
+        .nota-informativa { background-color: #eef4fb; border-left: 5px solid #004a99; padding: 15px; margin: 20px 0; }
+        
+        /* Estilos para la integración del PDF */
+        .pdf-section { margin-top: 40px; border-top: 2px solid #004a99; padding-top: 20px; }
+        .pdf-container { position: relative; width: 100%; height: 800px; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; }
+        .btn-download { display: inline-block; padding: 10px 20px; background-color: #004a99; color: white; text-decoration: none; border-radius: 5px; margin-bottom: 15px; font-weight: bold; }
+        .btn-download:hover { background-color: #003366; }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Puntos Mínimos de Utilización</h1>
+        <p>Prescripciones de confort y seguridad según la Instrucción ITC-BT-25</p>
+    </header>
+<nav>
+        <ul>
+            <li><a href="index.html">Resumen ITC-BT-25</a></li> 
+            <li><a href="basica.html">Electrificación Básica</a></li>
+            <li><a href="elevada.html">Electrificación Elevada</a></li>
+            <li class="active"><a href="puntos_minimos.html">Puntos de Utilización</a></li>
+            <li><a href="prl.html">PRL</a></li>
+            <li><a href="presupuesto.html">Presupuesto</a></li>
+            <li><a href="evaluacion.html">Evaluación</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Dotación Mínima por Estancia</h2>
+        <p>Para garantizar la funcionalidad de la vivienda, el REBT establece una cantidad mínima de puntos de utilización en función de la superficie y el uso de cada habitación.</p>
+
+        <table class="tabla-puntos">
+            <thead>
+                <tr>
+                    <th>Estancia</th>
+                    <th>Alumbrado (C1)</th>
+                    <th>Tomas Corriente (C2)</th>
+                    <th>Otros Circuitos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="destacado-punto">Acceso / Vestíbulo</td>
+                    <td>1 punto de luz</td>
+                    <td>1 base 16A (2P+T)</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td class="destacado-punto">Salón / Comedor</td>
+                    <td>1 punto (S ≤ 10m²)<br>2 puntos (S > 10m²)</td>
+                    <td>1 base por cada 6m²<br>(Mínimo 3 bases)</td>
+                    <td>Toma TV y Datos (C2)</td>
+                </tr>
+                <tr>
+                    <td class="destacado-punto">Dormitorios</td>
+                    <td>1 punto (S ≤ 10m²)<br>2 puntos (S > 10m²)</td>
+                    <td>3 bases de 16A</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td class="destacado-punto">Cocina</td>
+                    <td>1 punto (S ≤ 10m²)<br>2 puntos (S > 10m²)</td>
+                    <td>2 bases de 16A (C2)</td>
+                    <td>C3: Horno/Cocina<br>C4: Lavadora/Lavavajillas/Termo<br>C5: 3 bases auxiliares</td>
+                </tr>
+                <tr>
+                    <td class="destacado-punto">Baños</td>
+                    <td>1 punto de luz</td>
+                    <td>-</td>
+                    <td>C5: 1 base (junto a lavabo)</td>
+                </tr>
+                <tr>
+                    <td class="destacado-punto">Pasillos</td>
+                    <td>1 punto cada 5m</td>
+                    <td>1 base cada 5m</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="nota-informativa">
+            <h3>📌 Notas de aplicación técnica:</h3>
+            <ul>
+                <li><strong>Superficie (S):</strong> Se refiere a la superficie útil de la estancia.</li>
+                <li><strong>C5:</strong> Tomas de corriente de los cuartos de baño y bases de la encimera de la cocina.</li>
+            </ul>
+        </div>
+
+        <div class="pdf-section">
+            <h2>Tablas de Selección y Cálculo de Conductores</h2>
+            <p>Consulta a continuación el documento oficial con las potencias previstas, secciones mínimas y diámetros de tubos protectores.</p>
+            
+            <a href="tabla_conductores.pdf" class="btn-download" target="_blank">📥 Descargar Tablas en PDF</a>
+            
+            <div class="pdf-container">
+                <iframe src="tabla_conductores.pdf" width="100%" height="100%" style="border: none;">
+                    <p>Tu navegador no admite el visionado de PDFs. <a href="tabla_conductores.pdf">Descarga el archivo aquí</a>.</p>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Instalaciones Eléctricas - Formación Profesional</p>
+    </footer>
+
+</body>
+</html>

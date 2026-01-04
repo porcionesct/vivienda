@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevención de Riesgos Eléctricos - FP</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        .riesgo-card { background: #fff; padding: 20px; border-left: 5px solid #e74c3c; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .medida-preventiva { background: #d4edda; padding: 15px; border-radius: 8px; border-left: 5px solid #28a745; margin-top: 10px; }
+        .importante { font-weight: bold; color: #c0392b; }
+        .pasos-seguridad { list-style: none; counter-reset: paso; padding-left: 0; }
+        .pasos-seguridad li::before { content: counter(paso) ". "; counter-increment: paso; font-weight: bold; color: #004a99; }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Prevención de Riesgos Laborales</h1>
+        <p>Seguridad en Instalaciones de Viviendas (ITC-BT-25)</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Resumen ITC-BT-25</a></li> 
+            <li><a href="basica.html">Electrificación Básica</a></li>
+            <li><a href="elevada.html">Electrificación Elevada</a></li>
+            <li><a href="puntos_minimos.html">Puntos de Utilización</a></li>
+            <li class="active"><a href="prl.html">PRL</a></li>
+            <li><a href="presupuesto.html">Presupuesto</a></li>
+            <li><a href="evaluacion.html">Evaluación</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Seguridad Eléctrica en el Trabajo</h2>
+        <p>La manipulación de instalaciones eléctricas interiores requiere el estricto cumplimiento de normas de seguridad para evitar accidentes por contacto directo o indirecto.</p>
+
+        
+
+        <h3>Las 5 Reglas de Oro</h3>
+        <p>Antes de trabajar en cualquier circuito de la vivienda (C1-C5), se deben seguir estos pasos:</p>
+        <ul class="pasos-seguridad">
+            <li><strong>Desconectar:</strong> Corte visible de todas las fuentes de tensión (abrir el IGA y PIAs)[cite: 28].</li>
+            <li><strong>Prevenir cualquier realimentación:</strong> Bloqueo de los aparatos de corte (candados o etiquetas).</li>
+            <li><strong>Verificar ausencia de tensión:</strong> Comprobar con un multímetro o comprobador en los bornes de salida.</li>
+            <li><strong>Puesta a tierra y cortocircuito:</strong> Vital en trabajos de alta potencia o líneas generales.</li>
+            <li><strong>Señalización:</strong> Delimitar la zona de trabajo y colocar carteles de aviso.</li>
+        </ul>
+
+        <div class="riesgo-card">
+            <h3>⚠️ Riesgos Principales</h3>
+            <ul>
+                <li><strong>Contacto Directo:</strong> Tocar partes activas de la instalación (cables pelados, bornes).</li>
+                <li><strong>Contacto Indirecto:</strong> Tocar masas puestas accidentalmente bajo tensión por fallo de aislamiento.</li>
+                <li><strong>Arco Eléctrico:</strong> Producido por cortocircuitos durante la medición o manipulación de PIAs.</li>
+            </ul>
+        </div>
+
+        <h3>Protecciones Obligatorias según ITC-BT-25</h3>
+        <div class="medida-preventiva">
+            <ul>
+                <li><strong>Interruptor Diferencial:</strong> Es la barrera principal de seguridad para las personas, con una sensibilidad de <strong>30 mA</strong>.</li>
+                <li><strong>Toma de Tierra:</strong> Uso obligatorio de conductor de protección (Verde-Amarillo) en todos los circuitos.</li>
+                <li><strong>Seccionamiento:</strong> Identificación clara de cada circuito en el cuadro para evitar errores de manipulación.</li>
+            </ul>
+        </div>
+
+        <h3>Equipos de Protección Individual (EPIs)</h3>
+        <p>Para la ejecución y verificación de instalaciones interiores, el instalador debe usar:</p>
+        <ul>
+            <li>Guantes aislantes de clase adecuada.</li>
+            <li>Calzado de seguridad dieléctrico.</li>
+            <li>Herramientas manuales con aislamiento homologado (hasta 1000V).</li>
+            <li>Gafas de protección contra arcos eléctricos.</li>
+        </ul>
+    </div>
+
+</body>
+</html>

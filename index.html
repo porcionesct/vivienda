@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalaciones Interiores en Viviendas: ITC-BT-25</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Instalaciones en Viviendas (ITC-BT-25)</h1>
+        <p>Reglamento Electrotécnico para Baja Tensión - FP Electricidad</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li class="active"><a href="index.html">Resumen ITC-BT-25</a></li> 
+            <li><a href="basica.html">Electrificación Básica</a></li>
+            <li><a href="elevada.html">Electrificación Elevada</a></li>
+            <li><a href="puntos_minimos.html">Puntos de Utilización</a></li>
+            <li><a href="prl.html">PRL</a></li>
+            <li><a href="presupuesto.html">Presupuesto</a></li>
+            <li><a href="evaluacion.html">Evaluación</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Definición y Ámbito de Aplicación</h2>
+        <p>La Instrucción Técnica Complementaria <strong>ITC-BT-25</strong> establece las prescripciones mínimas que deben cumplir las instalaciones eléctricas interiores en viviendas, garantizando seguridad, funcionalidad y homogeneidad en el diseño. Se aplica tanto a viviendas de nueva construcción como a reformas importantes.</p>
+
+        <div class="automata-image">
+             <img id="myImg" src="images/cgmp.jfif" alt="Cuadro General de Mando y Protección" style="cursor: pointer;">
+        </div>
+      
+        <h2>1. Grados de Electrificación</h2>
+        <p>El grado de electrificación determina la potencia mínima prevista y el número de circuitos de la vivienda.</p>
+        
+        <ul>
+            <li><strong>Electrificación Básica:</strong> Potencia mínima de 5,75 kW. Cubre las necesidades primarias mediante los circuitos C1 a C5.</li>
+            <li><strong>Electrificación Elevada:</strong> Potencia mínima de 9,2 kW. Obligatoria para superficies > 160 m², calefacción eléctrica, aire acondicionado o más de 30 puntos de luz.</li>
+        </ul>
+
+        <h2>2. Circuitos Normalizados</h2>
+        <p>Son las interfaces que conectan el cuadro de protección con los diferentes receptores de la vivienda.</p>
+
+        <h3><strong>⚡ Configuración de Circuitos Básicos</strong></h3>
+        <ul>
+            <li><strong>C1 Alumbrado:</strong> Sección 1,5 mm² - Protección 10 A.</li>
+            <li><strong>C2 Tomas uso general:</strong> Sección 2,5 mm² - Protección 16 A (salón y dormitorios).</li>
+            <li><strong>C3 Cocina y horno:</strong> Sección 6 mm² - Protección 25 A.</li>
+            <li><strong>C4 Lavadora, lavavajillas y termo:</strong> Sección 4 mm² - Protección 20 A.</li>
+            <li><strong>C5 Tomas baño y cocina:</strong> Sección 2,5 mm² - Protección 16 A (enchufes de encimera y auxiliares).</li>
+        </ul>
+
+        <h2>3. Cuadro General de Mando y Protección (CGMP)</h2>
+        <p>Es el sistema de control robusto que protege la instalación. Debe incluir:</p>
+        <ul>
+            <li><strong>IGA (Interruptor General Automático):</strong> Protege contra sobrecargas y cortocircuitos.</li>
+            <li><strong>Protección contra sobretensiones:</strong> Protege los equipos electrónicos.</li>
+            <li><strong>Interruptor Diferencial:</strong> De alta sensibilidad (30 mA) para seguridad de personas.</li>
+            <li><strong>PIAs (Pequeños Interruptores Automáticos):</strong> Uno por cada circuito (C1, C2, C3, C4, C5).</li>
+        </ul>
+
+        <h2>4. Puntos Mínimos de Utilización</h2>
+        <p>Según la superficie y tipo de estancia, se deben instalar los siguientes puntos mínimos:</p>
+        <ul>
+            <li><strong>Salón/Dormitorios:</strong> 1 punto de luz si S ≤ 10m²; 2 puntos si S > 10m².</li>
+            <li><strong>Tomas C2:</strong> En salón, 1 base por cada 6m² (mínimo 3).</li>
+            <li><strong>Zonas Húmedas:</strong> Uso obligatorio de conductor de protección y separación de circuitos.</li>
+        </ul>
+
+        <p>La correcta aplicación de la ITC-BT-25 es esencial para el diseño, ejecución y verificación de cualquier instalación eléctrica residencial.</p>
+    </div>
+
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
+
+    <script>
+        var modal = document.getElementById("myModal");
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+        img.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+        }
+
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function() { 
+          modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+    </script>
+</body>
+</html>
