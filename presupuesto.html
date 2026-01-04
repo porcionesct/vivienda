@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presupuesto Eléctrico Vivienda - ITC-BT-25</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        .partida-presupuesto { margin-bottom: 30px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .partida-presupuesto h3 { color: #004a99; border-bottom: 2px solid #004a99; padding-bottom: 5px; margin-top: 0; }
+        .descripcion-tecnica { font-style: italic; color: #444; margin: 10px 0; line-height: 1.5; }
+        .tabla-precios { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        .tabla-precios th { background-color: #f8f9fa; text-align: left; padding: 10px; border: 1px solid #ddd; }
+        .tabla-precios td { padding: 10px; border: 1px solid #ddd; }
+        .total-partida { text-align: right; font-weight: bold; background: #eef4fb; }
+        .resumen-economico { background: #004a99; color: white; padding: 25px; border-radius: 8px; margin-top: 40px; }
+        .resumen-economico h2 { margin-top: 0; border-bottom: 1px solid #fff; padding-bottom: 10px; }
+        .fila-resumen { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 1.1em; }
+        .total-final { font-size: 1.5em; font-weight: bold; border-top: 2px solid #fff; pt: 10px; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Presupuesto de Instalación Eléctrica</h1>
+        <p>Vivienda Unifamiliar - Cumplimiento REBT e ITC-BT-25</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Resumen ITC-BT-25</a></li> 
+            <li><a href="basica.html">Electrificación Básica</a></li>
+            <li><a href="elevada.html">Electrificación Elevada</a></li>
+            <li><a href="puntos_minimos.html">Puntos de Utilización</a></li>
+            <li><a href="prl.html">PRL</a></li>
+            <li class="active"><a href="presupuesto.html">Presupuesto</a></li>
+            <li><a href="evaluacion.html">Evaluación</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Detalle de Mediciones y Partidas</h2>
+        <p>Presupuesto elaborado en Granada a fecha de 02 de enero de 2026 para la ejecución de instalaciones interiores.</p>
+
+        <div class="partida-presupuesto">
+            <h3>1. Derivación Individual Monofásica</h3>
+            <p class="descripcion-tecnica">Instalada con cable de cobre de tres conductores H07V-K(AS) de 10 mm² de sección nominal, empotrada y aislada con tubo de PVC flexible de 40 mm de diámetro, incluso p.p. de cajas de derivación y ayudas de albañilería; construido según REBT y normas de la compañía suministradora.</p>
+            <table class="tabla-precios">
+                <tr>
+                    <th>Concepto</th>
+                    <th>Medición</th>
+                    <th>Precio Ud.</th>
+                    <th>Subtotal</th>
+                </tr>
+                <tr>
+                    <td>Metro Lineal (ml)</td>
+                    <td>1</td>
+                    <td>72,80 €</td>
+                    <td>72,80 €</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="partida-presupuesto">
+            <h3>2. Cuadro General de Mando y Protección (CGMP)</h3>
+            <p class="descripcion-tecnica">Armario construido en PVC reforzado con fibra de vidrio para empotrar (36 elem.), con aparellaje completo: IGA 25A con bobina de sobretensiones, Diferencial 40A/30mA, Limitador de sobretensiones Tipo II y III, y PIAs correspondientes (10A, 16A, 25A).</p>
+            <table class="tabla-precios">
+                <tr>
+                    <th>Concepto</th>
+                    <th>Medición</th>
+                    <th>Precio Ud.</th>
+                    <th>Subtotal</th>
+                </tr>               
+                <tr>
+                    <td>Aparellaje y Armario completo</td>
+                    <td>1</td>
+                    <td>601,20 €</td>
+                    <td>601,20 €</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="partida-presupuesto">
+            <h3>3. Circuito de Alumbrado (C1)</h3>
+            <p class="descripcion-tecnica">Instalado con cable de cobre H07V-K de 1,5 mm² de sección nominal, empotrado y aislado con tubo de PVC flexible de 16 mm de diámetro. Incluye puntos de luz sencillos y conmutados con mecanismos de primera calidad.</p>
+            <table class="tabla-precios">
+                <tr>
+                    <th>Concepto</th>
+                    <th>Medición</th>
+                    <th>Precio Ud.</th>
+                    <th>Subtotal</th>
+                </tr>
+                <tr>
+                    <td>ml. Circuito Alumbrado</td>
+                    <td>1</td>
+                    <td>26,98 €</td>
+                    <td>26,98 €</td>
+                </tr>
+                <tr>
+                    <td>Punto de luz sencillo</td>
+                    <td>5</td>
+                    <td>29,72 €</td>
+                    <td>148,6 €</td>
+                </tr>
+                <tr>
+                    <td>Punto de luz conmutado</td>
+                    <td>2</td>
+                    <td>42,72 €</td>
+                    <td>85,44 €</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="partida-presupuesto">
+            <h3>4. Tomas de Corriente (C2, C5)</h3>
+            <p class="descripcion-tecnica">Instaladas con cable de cobre H07V-K de 2,5 mm² de sección nominal, empotrado bajo tubo de PVC flexible, incluso mecanismos de toma de corriente 16A con puesta a tierra.</p>
+            <table class="tabla-precios">
+                <tr>
+                    <th>Concepto</th>
+                    <th>Medición</th>
+                    <th>Precio Ud.</th>
+                    <th>Subtotal</th>
+                </tr>
+                <tr>
+                    <td>Toma de corriente empotrada 16A</td>
+                    <td>20 unidades</td>
+                    <td>33,00 €</td>
+                    <td>660,00 €</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="partida-presupuesto">
+            <h3>5. Circuito de Cocina y Horno (C3)</h3>
+            <p class="descripcion-tecnica">Instalación con cable H07V-K de 6 mm² de sección nominal, empotrado bajo tubo de PVC flexible de 25 mm, incluyendo toma de corriente especial de 25A para vitrocerámica y horno.</p>
+            <table class="tabla-precios">
+                <tr>
+                    <th>Concepto</th>
+                    <th>Medición</th>
+                    <th>Precio Ud.</th>
+                    <th>Subtotal</th>
+                </tr>             
+                <tr>
+                    <td>Circuito y Toma 25A</td>
+                    <td>1 unidad</td>
+                    <td>50,00 €</td>
+                    <td>50,00 €</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="resumen-economico">
+            <h2>RESUMEN DEL PRESUPUESTO</h2>
+            <div class="fila-resumen">
+                <span>Total Ejecución Material (Suma de partidas):</span>
+                <span>1645,02 €</span>
+            </div>
+            <div class="fila-resumen">
+                <span>Beneficio Industrial (10%):</span>
+                <span>164,50 €</span>
+            </div>
+            <div class="fila-resumen">
+                <span>IVA Aplicable (21%):</span>
+                <span>380,00 €</span>
+            </div>
+            <div class="fila-resumen total-final">
+                <span>TOTAL PRESUPUESTO CONTRATA:</span>
+                <span>2.189,52 €</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Instalaciones Eléctricas Granada - Formación Profesional</p>
+    </footer>
+
+</body>
+</html>

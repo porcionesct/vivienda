@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrificación Elevada - ITC-BT-25</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Grados de Electrificación</h1>
+        <p>Electrificación Elevada según ITC-BT-25</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Resumen ITC-BT-25</a></li> 
+            <li><a href="basica.html">Electrificación Básica</a></li>
+            <li class="active"><a href="elevada.html">Electrificación Elevada</a></li>
+            <li><a href="puntos_minimos.html">Puntos de Utilización</a></li>
+            <li><a href="prl.html">PRL</a></li>
+            <li><a href="presupuesto.html">Presupuesto</a></li>
+            <li><a href="evaluacion.html">Evaluación</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Características de la Electrificación Elevada</h2>
+        
+        <p>La electrificación elevada se aplica cuando las necesidades de potencia o el equipamiento de la vivienda superan los estándares básicos. Requiere una infraestructura más robusta para garantizar la seguridad y el suministro.</p>
+
+        <div class="automata-image">
+             <img id="myImg" src="images/cgmp-ee.jpg" alt="Esquema de distribución elevada con circuitos adicionales" style="cursor: pointer;">
+        </div>
+
+        <h3>1. Potencia Mínima Prevista</h3>
+        <p>Para este grado, la instalación debe estar preparada para una potencia mínima de <strong>9.200 W (9,2 kW)</strong> a 230 V.</p>
+
+        <h3>2. Criterios de Aplicación Obligatoria</h3>
+        <p>Es obligatorio instalar electrificación elevada si se cumple cualquiera de estos puntos:</p>
+        <ul>
+            <li>Superficie útil de la vivienda superior a <strong>160 m²</strong>.</li>
+            <li>Instalación de <strong>aire acondicionado</strong> o <strong>calefacción eléctrica</strong>.</li>
+            <li>Más de 30 puntos de luz o más de 20 tomas de corriente de uso general.</li>
+            <li>Presencia de secadora o sistemas de automatización (domótica).</li>
+        </ul>
+
+        <h3>3. Circuitos Adicionales (C6 a C12)</h3>
+        <p>Además de los circuitos C1-C5, se añaden circuitos independientes según la necesidad:</p>
+        <ul>
+            <li><strong>C6 (Adicional Alumbrado):</strong> Por cada 30 puntos de luz adicionales.</li>
+            <li><strong>C7 (Adicional Tomas C2):</strong> Por cada 20 tomas de uso general adicionales.</li>
+            <li><strong>C8:</strong> Calefacción eléctrica.</li>
+            <li><strong>C9:</strong> Aire acondicionado.</li>
+            <li><strong>C10:</strong> Secadora independiente.</li>
+            <li><strong>C11:</strong> Domótica y sistemas de seguridad.</li>
+            <li><strong>C12:</strong> Circuitos adicionales de C3, C4 o C5 (si el número de tomas lo requiere).</li>
+        </ul>
+
+        <h3>4. Protecciones en el Cuadro</h3>
+        <p>En este grado, el <strong>IGA (Interruptor General Automático)</strong> suele ser de <strong>40 A</strong>. Además, se recomienda el uso de varios interruptores diferenciales para evitar que un fallo en un circuito deje sin suministro a toda la vivienda.</p>
+    
+<p><strong>Esquema unifilar de una vivienda de electrificación elevada</strong></p>
+   
+       <div class="automata-image">
+             <img id="myImg" src="images/unifilar-ee01.jpg" alt="Esquema de distribución básica" style="cursor: pointer;">
+        </div>
+<p><strong>Esquema unifilar de una vivienda de electrificación elevada con circuito C4 desdoblado</strong></p>
+        <div class="automata-image">
+             <img id="myImg" src="images/unifilar-ee02.jpg" alt="Esquema de distribución básica" style="cursor: pointer;">
+        </div>
+<p><strong>Esquema unifilar de una vivienda de electrificación elevada completa con circuito C4 desdoblado</strong></p>
+        <div class="automata-image">
+             <img id="myImg" src="images/unifilar-ee03.jpg" alt="Esquema de distribución básica" style="cursor: pointer;">
+        </div>
+        <div class="pdf-section">
+            <h2>Esquemas unifilares electrificación elevada</h2>
+                       
+            <a href="unifilar_ee.pdf" class="btn-download" target="_blank">📥 Descargar Tablas en PDF</a>
+            
+            <div class="pdf-container">
+                <iframe src="unifilar_ee.pdf" width="100%" height="100%" style="border: none;">
+                    <p>Tu navegador no admite el visionado de PDFs. <a href="unifilar_eb01.pdf">Descarga el archivo aquí</a>.</p>
+                </iframe>
+            </div>
+        </div>
+</div>
+
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
+
+    <script>
+        var modal = document.getElementById("myModal");
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+        img.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+        }
+
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function() { 
+          modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+    </script>
+</body>
+</html>

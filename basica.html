@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrificación Básica - ITC-BT-25</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Grados de Electrificación</h1>
+        <p>Electrificación Básica según ITC-BT-25</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Resumen ITC-BT-25</a></li> 
+            <li class="active"><a href="basica.html">Electrificación Básica</a></li>
+            <li><a href="elevada.html">Electrificación Elevada</a></li>
+            <li><a href="puntos_minimos.html">Puntos de Utilización</a></li>
+            <li><a href="prl.html">PRL</a></li>
+            <li><a href="presupuesto.html">Presupuesto</a></li>
+            <li><a href="evaluacion.html">Evaluación</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Características de la Electrificación Básica</h2>
+        
+        <p>La electrificación básica es el sistema mínimo exigido para cubrir las necesidades primarias de una vivienda. Debe permitir la utilización simultánea de los aparatos eléctricos de uso común.</p>
+
+        <div class="automata-image">
+             <img id="myImg" src="images/cgmp-eb.jpg" alt="Esquema de distribución básica" style="cursor: pointer;">
+        </div>
+
+        <h3>1. Potencia y Previsión</h3>
+        <p>La instalación debe estar dimensionada para una potencia no inferior a <strong>5.750 W (5,75 kW)</strong> a 230 V, independientemente de la potencia que se contrate inicialmente.</p>
+
+        <h3>2. Circuitos Mínimos Obligatorios</h3>
+        <p>Para este grado, el reglamento exige la instalación de 5 circuitos independientes:</p>
+        <ul>
+            <li><strong>C1 (Alumbrado):</strong> Para iluminación y puntos de luz.</li>
+            <li><strong>C2 (Tomas de corriente):</strong> Tomas de uso general y frigorífico.</li>
+            <li><strong>C3 (Cocina y Horno):</strong> Circuito de fuerza para estos electrodomésticos.</li>
+            <li><strong>C4 (Lavadora, Lavavajillas y Termo):</strong> Circuito para electrodomésticos de lavado y agua caliente.</li>
+            <li><strong>C5 (Baño y Cocina):</strong> Tomas de corriente en zonas húmedas y auxiliares de cocina.</li>
+        </ul>
+
+        <h3>3. Requisitos de Instalación</h3>
+        <p>Se aplica el grado básico siempre que se cumplan estas condiciones:</p>
+        <ul>
+            <li>Superficie útil de la vivienda inferior a <strong>160 m²</strong>.</li>
+            <li>No existe instalación de calefacción eléctrica ni aire acondicionado.</li>
+            <li>El número de puntos de luz no supera los 30.</li>
+            <li>El número de tomas de corriente (C2) no supera las 20.</li>
+        </ul>
+
+        <p>Es fundamental que cada circuito cuente con su propio <strong>PIA (Pequeño Interruptor Automático)</strong> y que la sección de los cables sea la adecuada para evitar sobrecalentamientos.</p>
+        <p><strong>Esquema unifilar de una vivienda de electrificación básica</strong></p>
+   
+       <div class="automata-image">
+             <img id="myImg" src="images/unifilar-eb01.jpg" alt="Esquema de distribución básica" style="cursor: pointer;">
+        </div>
+        <p><strong>Esquema unifilar de una vivienda de electrificación básica con circuito C4 desdoblado</strong></p>
+        <div class="automata-image">
+             <img id="myImg" src="images/unifilar-eb.jpg" alt="Esquema de distribución básica" style="cursor: pointer;">
+        </div>
+        <div class="pdf-section">
+            <h2>Esquemas unifilares electrificación básica</h2>
+                       
+            <a href="unifilar_eb01.pdf" class="btn-download" target="_blank">📥 Descargar Tablas en PDF</a>
+            
+            <div class="pdf-container">
+                <iframe src="unifilar_eb01.pdf" width="100%" height="100%" style="border: none;">
+                    <p>Tu navegador no admite el visionado de PDFs. <a href="unifilar_eb01.pdf">Descarga el archivo aquí</a>.</p>
+                </iframe>
+            </div>
+        </div>
+
+ </div>
+
+
+
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
+
+    <script>
+        var modal = document.getElementById("myModal");
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+        img.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+          captionText.innerHTML = this.alt;
+        }
+
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function() { 
+          modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+    </script>
+</body>
+</html>
